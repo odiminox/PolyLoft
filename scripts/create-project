@@ -1,0 +1,27 @@
+#!/usr/bin/ruby
+
+require 'fileutils'
+
+template_proj_name = "template-proj-dir"
+
+project_name = ARGV[0]
+
+raise ArgumentError if project_name.to_s.empty?
+
+begin
+FileUtils.mkdir(File.expand_path(project_name))
+raise Error unless Dir.exists?(File.expand_path(template_proj_name))
+FileUtils.cp_r(Dir.glob("#{File.expand_path(template_proj_name)}/*"), File.expand_path(project_name))
+
+Dir.glob("#{File.expand_path(project_name)}/**/*") do |file|
+  unless File.directory?(file)
+    text = File.read(file)
+    replaced = text.gsub!(/%PROJECTNAME%/, project_name.upcase)
+    File.open(file, "w") { |f| f.puts replaced }
+  end
+end
+rescue Exception => e
+  puts "Failed to create #{project_name} from template #{template_proj_name} error: #{e}"
+  FileUtils.rm_rf(File.expand_path(project_name)) if File.exists?(File.expand_path(project_name))
+  exit 1
+end
