@@ -1,2 +1,2 @@
 # PolyLoft
-The Polygon Lofts 2D DOD Game Engine 
+The Polygon Lofts 2D Data Orientated Design Game Engine.
