@@ -10,5 +10,3 @@ Development Objectives:
 6. Engine core is organised into sub component architecture
 7. High-level development API for straight-forward game development
 8. Test Driven Development and strict code standards for C++ core
-
-
