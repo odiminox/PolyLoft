@@ -14,12 +14,11 @@ include_directories("${PROJECT_SOURCE_DIR}")
 include_directories("${CMAKE_SOURCE_DIR}/include")
 
 # SUB COMPONENTS HERE
-#add_subdirectory(sub-component-here)
+add_subdirectory(src/opengl)
 
-# LIBS HERE
-#set(PROJECT_LIBS
-#  OPENGL
-#  )
+set(PROJECT_LIBS
+  OPENGL
+)
 
 add_executable(${PROJECT_NAME} ${PROJECT_SRC_DIR}/main.cpp)
 target_link_libraries(${PROJECT_NAME} ${PROJECT_LIBS})
