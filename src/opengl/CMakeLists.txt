@@ -12,7 +12,7 @@ file(GLOB_RECURSE OPENGL_SRC ${PROJECT_SOURCE_DIR}/*.cpp)
 find_package(OpenGL REQUIRED)
 
 include_directories(
-  ${PROJECT_INCLUDE_DIR}/third-party/glfw-3.2.1/include/GLFW/
+  ${PROJECT_INCLUDE_DIR}/third-party/glfw-3.3.1/include/GLFW/
   ${PROJECT_INCLUDE_DIR}/third-party/glew-1.13.0/include/
   "${PROJECT_INCLUDE_DIR}"
   "${PROJECT_BINARY_DIR}"
