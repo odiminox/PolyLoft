@@ -3,26 +3,46 @@
 CMAKE_DIR=`pwd`
 BUILD_DIR="${B_HOME}/_build"
 INSTALL_DIR="${B_HOME}/_install/"
-PROJECT=$0
 
 function build() {
- rm -rf $BUILD_DIR
- rm -rf $INSTALL_DIR
- mkdir $BUILD_DIR
- mkdir $INSTALL_DIR
- cd $BUILD_DIR
- cmake $CMAKE_DIR
+  echo "Building..."
+  rm -rf $BUILD_DIR
+  rm -rf $INSTALL_DIR
+  mkdir $BUILD_DIR
+  mkdir $INSTALL_DIR
+  cd $BUILD_DIR
+  cmake $CMAKE_DIR
 }
+
+function install() {
+  echo "Installing..."
+  cd $BUILD_DIR
+  make
+  make install
+}
+
+if [ $1 = "install" ]; then
+  if [[ -d "$INSTALL_DIR" ]]; then
+    install
+  else
+    echo "No install dir found at ${INSTALL_DIR}, creating..."
+    mkdir $INSTALL_DIR
+    install
+  fi
+fi
 
 if [[ ! -d "$B_HOME" ]]; then
   "No B_HOME dir found at ${B_HOME}, creating..."
   mkdir $B_HOME
 fi
 
-if [[ -d "$INSTALL_DIR" ]]; then
-  build
-else
-  echo "No install dir found at ${INSTALL_DIR}, creating..."
-  mkdir $INSTALL_DIR
-  build
+if [ $1 = "build" ]; then
+  if [[ -d "$BUILD_DIR" ]]; then
+    build
+  else
+    echo "No build dir found at ${BUILD_DIR}, creating..."
+    mkdir $BUILD_DIR
+    build
+  fi
 fi
+
