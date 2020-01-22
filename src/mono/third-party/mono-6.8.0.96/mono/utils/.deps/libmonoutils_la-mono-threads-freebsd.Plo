@@ -1,0 +1,6 @@
+libmonoutils_la-mono-threads-freebsd.lo: mono-threads-freebsd.c \
+ /usr/include/stdc-predef.h ../../config.h
+
+/usr/include/stdc-predef.h:
+
+../../config.h:

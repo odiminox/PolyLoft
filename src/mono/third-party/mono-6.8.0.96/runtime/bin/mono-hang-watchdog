@@ -1,0 +1,3 @@
+#! /bin/sh
+r='/home/simon/dev/PolyLoft/src/mono/third-party/mono-6.8.0.96'
+exec "$r/tools/mono-hang-watchdog/mono-hang-watchdog" "$@"

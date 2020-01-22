@@ -1,0 +1,6 @@
+libmonoutils_la-mono-threads-haiku.lo: mono-threads-haiku.c \
+ /usr/include/stdc-predef.h ../../config.h
+
+/usr/include/stdc-predef.h:
+
+../../config.h:

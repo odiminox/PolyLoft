@@ -1,0 +1,10 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/simon/dev/PolyLoft/src/mono/third-party/mono-6.8.0.96/mono/btls/build-shared/boringssl/crypto/ec/p256-x86_64-asm.S
+

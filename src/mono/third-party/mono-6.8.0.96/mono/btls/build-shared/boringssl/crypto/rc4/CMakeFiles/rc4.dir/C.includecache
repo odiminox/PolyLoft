@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/simon/dev/PolyLoft/src/mono/third-party/mono-6.8.0.96/external/boringssl/crypto/../include/openssl/base.h
+stddef.h
+-
+stdint.h
+-
+sys/types.h
+-
+openssl/opensslconf.h
+-
+boringssl_prefix_symbols.h
+-
+
+/home/simon/dev/PolyLoft/src/mono/third-party/mono-6.8.0.96/external/boringssl/crypto/../include/openssl/opensslconf.h
+
+/home/simon/dev/PolyLoft/src/mono/third-party/mono-6.8.0.96/external/boringssl/crypto/../include/openssl/rc4.h
+openssl/base.h
+-
+
+/home/simon/dev/PolyLoft/src/mono/third-party/mono-6.8.0.96/external/boringssl/crypto/rc4/rc4.c
+openssl/rc4.h
+-
+

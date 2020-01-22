@@ -1,0 +1,11 @@
+#! /bin/sh
+r='/home/simon/dev/PolyLoft/src/mono/third-party/mono-6.8.0.96'
+MONO_CFG_DIR='/home/simon/dev/PolyLoft/src/mono/third-party/mono-6.8.0.96/runtime/etc'
+PATH="$r/runtime/_tmpinst/bin:$PATH"
+if [ -z "$MONO_EXECUTABLE_WRAPPER" ]
+then
+    MONO_EXECUTABLE_WRAPPER=${MONO_EXECUTABLE:-"$r/mono/mini/mono"}
+fi
+MONO_EXECUTABLE=${MONO_EXECUTABLE:-"$r/mono/mini/mono"}
+export MONO_CFG_DIR PATH
+exec "$r/libtool" --mode=execute "${MONO_EXECUTABLE_WRAPPER}" --config "/home/simon/dev/PolyLoft/src/mono/third-party/mono-6.8.0.96/runtime/etc/mono/config" "$@"

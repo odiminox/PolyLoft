@@ -1,0 +1,6 @@
+libmonoutils_la-mono-dl-windows.lo: mono-dl-windows.c \
+ /usr/include/stdc-predef.h ../../config.h
+
+/usr/include/stdc-predef.h:
+
+../../config.h:

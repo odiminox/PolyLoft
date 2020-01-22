@@ -1,0 +1,2 @@
+#! /bin/sh
+exec "/home/simon/dev/PolyLoft/src/mono/third-party/mono-6.8.0.96/runtime/_tmpinst/bin/mono" "/home/simon/dev/PolyLoft/src/mono/third-party/mono-6.8.0.96/mcs/ilasm/ilasm.exe" "$@"

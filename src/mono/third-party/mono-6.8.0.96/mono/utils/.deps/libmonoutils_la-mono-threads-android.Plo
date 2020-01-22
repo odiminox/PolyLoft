@@ -1,0 +1,6 @@
+libmonoutils_la-mono-threads-android.lo: mono-threads-android.c \
+ /usr/include/stdc-predef.h ../../config.h
+
+/usr/include/stdc-predef.h:
+
+../../config.h:

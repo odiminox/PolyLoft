@@ -1,0 +1,6 @@
+libmonoutils_la-mono-threads-aix.lo: mono-threads-aix.c \
+ /usr/include/stdc-predef.h ../../config.h
+
+/usr/include/stdc-predef.h:
+
+../../config.h:

@@ -1,0 +1,6 @@
+libmonoutils_la-mono-dl-darwin.lo: mono-dl-darwin.c \
+ /usr/include/stdc-predef.h ../../config.h
+
+/usr/include/stdc-predef.h:
+
+../../config.h:

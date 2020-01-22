@@ -1,0 +1,10 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/simon/dev/PolyLoft/src/mono/third-party/mono-6.8.0.96/external/boringssl/crypto/curve25519/asm/x25519-asm-x86_64.S
+

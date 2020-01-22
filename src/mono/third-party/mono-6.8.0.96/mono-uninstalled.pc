@@ -1,0 +1,6 @@
+Name: Mono
+Description: Mono Runtime
+Version: 6.8.0.96
+Requires: glib-2.0 gthread-2.0
+Libs: -L/home/simon/dev/PolyLoft/src/mono/third-party/mono-6.8.0.96/mono/mini/.libs  -lmono  -lm -lm -lrt  -ldl -lpthread
+Cflags: -I/home/simon/dev/PolyLoft/src/mono/third-party/mono-6.8.0.96 -I/home/simon/dev/PolyLoft/src/mono/third-party/mono-6.8.0.96/mono -D_REENTRANT

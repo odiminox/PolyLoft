@@ -1,0 +1,5 @@
+#! /bin/sh
+r='/home/simon/dev/PolyLoft/src/mono/third-party/mono-6.8.0.96'
+MONO_CFG_DIR='/home/simon/dev/PolyLoft/src/mono/third-party/mono-6.8.0.96/runtime/etc'
+export MONO_CFG_DIR
+exec "$r/libtool" --mode=execute -dlopen "$r/mono/mini/libmono-2.0.la" "$r/mono/dis/monodis" "$@"

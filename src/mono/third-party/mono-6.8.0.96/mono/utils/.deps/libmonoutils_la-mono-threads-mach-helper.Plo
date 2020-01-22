@@ -1,0 +1,4 @@
+libmonoutils_la-mono-threads-mach-helper.lo: mono-threads-mach-helper.c \
+ /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:
